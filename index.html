@@ -9,17 +9,36 @@
 <body>
    <header>
     <h1>CRIATIVUZ SUPLEMENTOS</h1>
-    <p>Bom Suplemento é na Criativuz Suplementos, noutras lojas não!</p>
-
-    <nav></nav>
+    <p class="slogan">Bom Suplemento é na Criativuz Suplementos, noutras lojas não!</p>
+    <div class="badge-delivery">Entrega grátis para 90% da cidade de Luanda... </div>
+    <nav class="filters-container">
+        <input type="text" id="search-input" placeholder="Pesquisar produto...">
+        <div class="category-pills">
+            <button class="pill-btn active" data-category="todos">Todos</button>
+        </div>
+    </nav>
    </header>
    
    <main>
-    <section>
+    <section id="products-grid" class="products-grid">
+
     </section>
    </main>
 
-    <aside></aside>
+   <button id="cart-toggle-btn" class="cart-floating-btn">🛒 <span id="cart-count">0</span></button>
+
+    <aside id="cart-modal" class="cart-modal">
+        <h2>Seu Carrinho</h2>
+        <div id="cart-items"></div>
+        <p>Total: <span id="cart-total">0 KZ</span></p>
+
+        <input type="text" id="client-name" placeholder="Digite seu nome...">
+        <input type="text" id="client-address" placeholder="Bairro / Endereço...">
+
+        <button id="checkout-whatsapp-btn" class="whatsapp-btn">
+            Finalizar Pedido via WhatsApp
+        </button>
+    </aside>
 
    <footer></footer>
 
