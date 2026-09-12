@@ -49,6 +49,10 @@ header {
     text-align: center;
 }
 
+header h1 {
+    margin-bottom: var(--spacing-lg);
+}
+
 .category-pills {
   display: flex;
   flex-wrap: wrap;
@@ -68,6 +72,7 @@ header {
     width: 100%;
     max-width: 400px;
     padding: var(--spacing-sm) var(--spacing-md);
+    margin-top: var(--spacing-lg);
     border: none;
     border-radius: var(--radius-md)
 }
@@ -91,4 +96,14 @@ header {
 .pill-btn:hover {
   background-color: var(--primary-red);
   color: var(--bg-card);
+}
+
+.products-grid {
+  display: grid;
+  /* Cria colunas responsivas sem precisar de media queries! */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl) var(--spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
 }
