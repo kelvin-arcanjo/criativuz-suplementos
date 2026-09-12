@@ -98,7 +98,7 @@ header h1 {
 }
 
 .pill-btn:hover {
-  background-color: var(--primary-red);
+  background-color: var(--primary-red-dark);
   color: var(--bg-card);
 }
 
