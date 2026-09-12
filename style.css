@@ -49,6 +49,14 @@ header {
     text-align: center;
 }
 
+.category-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
 .filters-container {
     display: flex;
     flex-direction: column;
@@ -66,12 +74,21 @@ header {
 
 .pill-btn {
     background-color: transparent;
-    color: var(--bg-light);
+    color: var(--primary-red);
+    font-weight: bold;
     padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--primary-red-dark);
     border-radius: var(--radius-full);
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .pill-btn.active {
     background-color: var(--bg-light);
     color: var(--primary-red);
+}
+
+.pill-btn:hover {
+  background-color: var(--primary-red);
+  color: var(--bg-card);
 }
