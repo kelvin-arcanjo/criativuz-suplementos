@@ -1,3 +1,5 @@
+let currentCategory = 'todos';
+
 const products = [
   {
     id: 1,
@@ -77,3 +79,33 @@ function renderProducts(productsList) {
 }
 
 renderProducts(products);
+
+// Evento nos botões de filtro;
+
+document.querySelectorAll('.pill-btn').forEach(button => {
+    button.addEventListener('click' , (e) => {
+        document.querySelectorAll('.pill-btn').forEach(btn => btn.classList.remove('active'))
+        e.target.classList.add('active')
+
+        //Atualiza a variável de estado;
+
+        currentCategory = e.target.dataset.category;
+
+        //Aplica o Filtro;
+
+        filterProducts()
+    })
+})
+
+function filterProducts() {
+  let filtered = products;
+
+  if (currentCategory !== 'todos') {
+    filtered = filtered.filter(product => product.category === currentCategory);
+  }
+
+  // Renderiza a lista filtrada;
+  
+  renderProducts(filtered);
+}
+
