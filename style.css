@@ -47,6 +47,10 @@ header {
     color: var(--bg-light);
     padding: var(--spacing-xl) var(--spacing-md);
     text-align: center;
+    background: url('imagens/fumaca_criativuz.webp');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
 }
 
 header h1 {
