@@ -1,4 +1,7 @@
 let currentCategory = 'todos';
+let searchTerm = '';
+
+const searchInput = document.getElementById('search-input');
 
 const products = [
   {
@@ -80,32 +83,45 @@ function renderProducts(productsList) {
 
 renderProducts(products);
 
-// Evento nos botões de filtro;
+// Evento de digitação na busca;
+
+searchInput.addEventListener('input' , (e) => {
+    searchTerm = e.target.value.toLowerCase().trim()
+    applyFilters()
+})
+
+// Evento nos botões de categoria;
 
 document.querySelectorAll('.pill-btn').forEach(button => {
     button.addEventListener('click' , (e) => {
         document.querySelectorAll('.pill-btn').forEach(btn => btn.classList.remove('active'))
         e.target.classList.add('active')
 
-        //Atualiza a variável de estado;
-
         currentCategory = e.target.dataset.category;
-
-        //Aplica o Filtro;
-
-        filterProducts()
+        applyFilters();
     })
 })
 
-function filterProducts() {
-  let filtered = products;
+function applyFilters() {
+    let filtered = [...products]
 
-  if (currentCategory !== 'todos') {
-    filtered = filtered.filter(product => product.category === currentCategory);
-  }
+    //Aplica filtro de categoria;
 
-  // Renderiza a lista filtrada;
-  
+    if (currentCategory !== 'todos') {
+       filtered = filtered.filter(p => p.category === currentCategory) 
+    }
+
+    //Aplica filtro de busca por texto (nome ou benefícios);
+
+    if (searchTerm !== '') {
+        filtered = filtered.filter(p =>
+            p.name.toLowerCase().includes(searchTerm) || 
+            p.benefits.some(b => b.toLowerCase().includes(searchTerm))
+        )
+    }
+
+  //Renderiza o resultado final unificado;
+
   renderProducts(filtered);
 }
 
