@@ -236,3 +236,30 @@ document.getElementById('cart-items')
             removeFromCart(productId)
         }
     })
+
+
+//Função changeQuantity();
+
+function changeQuantity(id, delta) {
+    const item = cart.find(item => item.id === id)
+    if (!item) return
+
+    item.quantity += delta
+
+    // Se a quantidade cair para 0 ou menos, remove do carrinho;
+
+    if (item.quantity <= 0) {
+        removeFromCart(id)
+
+    } else {
+        updateCartUI()
+    }
+}
+
+//Função removeFromCart();
+
+function removerFromCart(id) {
+    cart = cart.filter(item => item.id !== id)
+
+    updateCartUI()
+}
