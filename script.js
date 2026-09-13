@@ -103,7 +103,7 @@ const products = [
     image: "imagens/pre-workout.jpg",
     benefits: ["Foco mental de elite", "Vascularização extrema", "Energia explosiva"]
   },
-  
+
   {
     id: 12,
     name: "Casein Night Protein 1kg",
@@ -294,8 +294,28 @@ function changeQuantity(id, delta) {
 
 //Função removeFromCart();
 
-function removerFromCart(id) {
+function removeFromCart(id) {
     cart = cart.filter(item => item.id !== id)
 
     updateCartUI()
+}
+
+// Função updateCartTotal;
+
+function updateCartTotal() {
+    const cartTotalElement = document.getElementById('cart-total')
+
+    const totalInKZ = cart.reduce((acc , item) => {
+        return acc + (item.price * item.quantity)
+    }, 0)
+
+    cartTotalElement.textContent = `${totalInKZ} KZ`;
+}
+
+//Função updateCartUI;
+
+function updateCartUI() {
+  renderCartItems();
+  updateCartCount();
+  updateCartTotal();
 }
