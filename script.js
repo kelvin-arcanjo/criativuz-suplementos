@@ -1,5 +1,6 @@
 let currentCategory = 'todos';
 let searchTerm = '';
+let cart = [];
 
 const searchInput = document.getElementById('search-input');
 
@@ -66,7 +67,7 @@ const products = [
     image: "imagens/whey-isolate.jpg",
     benefits: ["Alta concentração proteica", "Rápida absorção", "Zero açúcar"]
   },
-  
+
   {
     id: 8,
     name: "Multivitamin Complex 60 caps",
@@ -141,5 +142,33 @@ function applyFilters() {
   //Renderiza o resultado final unificado;
 
   renderProducts(filtered);
+}
+
+//Lógica Cart;
+
+function addToCart(productId) {
+    const product = products.find(p => p.id === productId)
+    if (!product) return
+
+    let cartItem = cart.find(item => item.id === productId)
+
+    if (!cartItem) {
+        cartItem = {
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            quantity: 0
+        }
+        cart.push(cartItem)
+    }
+
+    // Incrementa 1 em ambos os casos (novo ou existente);
+
+    cartItem.quantity++
+
+    // Atualiza os elementos da tela;
+
+    updateCartUI()
 }
 
