@@ -212,5 +212,27 @@ function renderCartItems() {
             </div>
           `).join('')
 
-          cartItemsContainer.innerHTML = itemsHTML;                  
+        cartItemsContainer.innerHTML = itemsHTML;                  
 }
+
+
+// Listener ÚNICO anexado ao container pai estático;
+
+document.getElementById('cart-items')
+    .addEventListener('click' , (e) => {
+        const button = e.target.closest('button')
+        if (!button) return;
+
+        const productId = parseInt(button.dataset.id)
+        const action = button.dataset.action
+
+        if (action === 'increase') {
+            changeQuantity(productId , 1)
+
+        } else if (action === 'decrease') {
+            changeQuantity(productId , -1)
+
+        } else if (action === 'remove') {
+            removeFromCart(productId)
+        }
+    })
