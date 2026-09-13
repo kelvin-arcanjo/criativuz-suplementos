@@ -56,6 +56,24 @@ const products = [
     price: 18000,
     image: "imagens/glutamine.jpg",
     benefits: ["Recuperação", "Fortalece imunidade", "Melhora saúde intestinal"]
+  },
+
+  {
+    id: 7,
+    name: "Whey Isolate 2kg",
+    category: "proteinas",
+    price: 38000,
+    image: "imagens/whey-isolate.jpg",
+    benefits: ["Alta concentração proteica", "Rápida absorção", "Zero açúcar"]
+  },
+  
+  {
+    id: 8,
+    name: "Multivitamin Complex 60 caps",
+    category: "massa-muscular",
+    price: 14000,
+    image: "imagens/multivitamin.jpg",
+    benefits: ["Recuperação acelerada", "Aumento de energia", "Suporte imunológico"]
   }
 ];
 
