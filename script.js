@@ -75,6 +75,42 @@ const products = [
     price: 14000,
     image: "imagens/multivitamin.jpg",
     benefits: ["Recuperação acelerada", "Aumento de energia", "Suporte imunológico"]
+  },
+
+  {
+    id: 9,
+    name: "BCAA 5000 Powder",
+    category: "massa-muscular",
+    price: 19500,
+    image: "imagens/bcaa.jpg",
+    benefits: ["Recuperação muscular", "Anticatabólico", "Reduz a fadiga"]
+  },
+
+  {
+    id: 10,
+    name: "Omega 3 Ultra Pure",
+    category: "emagrecimento",
+    price: 12500,
+    image: "imagens/omega3.jpg",
+    benefits: ["Saúde cardiovascular", "Ação anti-inflamatória", "Apoio articular"]
+  },
+
+  {
+    id: 11,
+    name: "Pre-Workout Nitro V8",
+    category: "forca-creatina",
+    price: 24000,
+    image: "imagens/pre-workout.jpg",
+    benefits: ["Foco mental de elite", "Vascularização extrema", "Energia explosiva"]
+  },
+  
+  {
+    id: 12,
+    name: "Casein Night Protein 1kg",
+    category: "proteinas",
+    price: 32000,
+    image: "imagens/casein.jpg",
+    benefits: ["Absorção lenta (8h)", "Nutrição noturna", "Manutenção da massa"]
   }
 ];
 
