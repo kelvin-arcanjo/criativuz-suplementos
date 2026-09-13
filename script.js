@@ -319,3 +319,63 @@ function updateCartUI() {
   updateCartCount();
   updateCartTotal();
 }
+
+//Função checkoutWhatsApp();
+
+function checkoutWhatsApp() {
+    if (cart.length === 0) {
+        alert("Seu carrinho está vazio!")
+        return
+    }
+
+    //Captura e valida os inputs do cliente;
+
+    const clientName = document.getElementById('client-name').value.trim();
+    const clientAddress = document.getElementById('client-address').value.trim();
+
+    if (!clientName || !clientAddress) {
+        alert("Por favor, preencha o seu nome e endereço para a entrega!");
+        return;
+    }
+
+    const phone = "244943567154" // Número da Criativuz Suplementos (DDI + DDD + Número);
+
+    //Percorre os itens do carrinho e adiciona as linhas;
+
+    const itemsList = cart.map(item => 
+        `• ${item.name} (x${item.quantity}) - ${item.price * item.quantity} KZ`
+    ).join('\n');
+
+    //Calcula o total geral;
+
+    const total = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+
+    // 4. Monta a mensagem estruturada;
+
+   const message = [
+        "*NOVO PEDIDO - CRIATIVUZ SUPLEMENTOS*",
+        "",
+        `*Cliente:* ${clientName}`,
+        `*Endereço:* ${clientAddress}`,
+        "",
+        "*Itens do Pedido:*",
+        itemsList,
+        "",
+        `*Total:* ${total} KZ`,
+        "",
+        "Aguardo as instruções para o pagamento!"
+    ].join('\n');
+
+    //Codifica a mensagem em formato URL;
+
+    const encodedMessage = encodeURIComponent(message)
+
+    //Redireciona para o whatsApp;
+
+    const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`
+    window.open(whatsappUrl , '_blank')
+}
+
+// Evento no botão de checkout;
+
+document.getElementById('checkout-whatsapp-btn').addEventListener('click', checkoutWhatsApp);
