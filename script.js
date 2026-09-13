@@ -172,3 +172,45 @@ function addToCart(productId) {
     updateCartUI()
 }
 
+//Função updateCartCount();
+
+function updateCartCount() {
+    const cartCountElement = document.getElementById('cart-count')
+    const totalCount = cart.reduce((total , item) => total + item.quantity , 0)
+
+    cartCountElement.textContent = totalCount
+}
+
+
+//Função renderCartItems();
+
+function renderCartItems() {
+    const cartItemsContainer = document.getElementById('cart-items')
+
+    if (cart.length === 0) {
+        cartItemsContainer
+            .innerHTML = '<p class="empty-cart">Seu carrinho está vazio </p>'
+
+        return
+    }
+
+    const itemsHTML = cart
+        .map(item => `
+            <div class="cart-item">
+                <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+                <div class="cart-item-info">
+                    <h4>${item.name}</h4>
+                    <p>${item.price} KZ</p>
+                </div>
+                <div class="cart-item-controls">
+                    <button class="btn-qty" data-id="${item.id}" data-action="decrease">-</button>
+                    <span>${item.quantity}</span>
+                    <button class="btn-qty" data-id="${item.id}" data-action="increase">+</button>
+                </div>
+                <p class="cart-item-subtotal">${item.price * item.quantity} KZ</p>
+                <button class="btn-remove" data-id="${item.id}" data-action="remove">&times;</button> 
+            </div>
+          `).join('')
+
+          cartItemsContainer.innerHTML = itemsHTML;                  
+}
