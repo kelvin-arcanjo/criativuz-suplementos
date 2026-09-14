@@ -10,7 +10,7 @@ const products = [
     name: "Hyperbolic Mass 4kg",
     category: "massa-muscular",
     price: 46500,
-    image: "imagens/hyperbolic-mass.jpg",
+    image: "imagens/hyperbolic 4kg.webp",
     benefits: ["Ganho de tamanho", "Ganho de peso", "Ganho de massa muscular"]
   },
 
@@ -19,7 +19,7 @@ const products = [
     name: "Cuts Burner 90 comp",
     category: "emagrecimento",
     price: 20000,
-    image: "imagens/cuts-burner.jpg",
+    image: "imagens/Cuts Burner 90 comp.webp",
     benefits: ["Queimador de gordura", "Aumenta a força", "Corta o apetite"]
   },
 
@@ -28,7 +28,7 @@ const products = [
     name: "Super Pump Beast 40 colheres",
     category: "forca-creatina",
     price: 22000,
-    image: "imagens/super-pump.jpg",
+    image: "imagens/Super Pump Beast.webp",
     benefits: ["Energia", "Resistência", "Garante treino intenso"]
   },
 
@@ -37,7 +37,7 @@ const products = [
     name: "100% Creatine Monohydrate",
     category: "forca-creatina",
     price: 16500,
-    image: "imagens/creatine.jpg",
+    image: "imagens/100  Creatine Monohydrate.webp",
     benefits: ["Força", "Resistência", "Recuperação muscular"]
   },
 
@@ -46,7 +46,7 @@ const products = [
     name: "L-Carnitine Liquid 2500",
     category: "emagrecimento",
     price: 25500,
-    image: "imagens/l-carnitine.jpg",
+    image: "imagens/LCarnitine Liquid 2500.webp",
     benefits: ["Emagrecimento", "Perda de peso", "Controle de peso"]
   },
 
@@ -55,63 +55,63 @@ const products = [
     name: "Pure Glutamine 9000",
     category: "proteinas",
     price: 18000,
-    image: "imagens/glutamine.jpg",
+    image: "imagens/Pure glutamine 9000.webp",
     benefits: ["Recuperação", "Fortalece imunidade", "Melhora saúde intestinal"]
   },
 
   {
     id: 7,
-    name: "Whey Isolate 2kg",
-    category: "proteinas",
-    price: 38000,
-    image: "imagens/whey-isolate.jpg",
-    benefits: ["Alta concentração proteica", "Rápida absorção", "Zero açúcar"]
+    name: "Pré Treino Qhush Super Heat 105g",
+    category: "forca-creatina",
+    price: 15500,
+    image: "imagens/Pré Treino Qhush Super Heat 105g.webp",
+    benefits: ["Aumenta a força e resistência", "Reduz o cansaço", "Mais tempo de treino"]
   },
 
   {
     id: 8,
-    name: "Multivitamin Complex 60 caps",
-    category: "massa-muscular",
-    price: 14000,
-    image: "imagens/multivitamin.jpg",
-    benefits: ["Recuperação acelerada", "Aumento de energia", "Suporte imunológico"]
+    name: "Black Bull Whey Supreme 908g",
+    category: "proteinas",
+    price: 29500,
+    image: "imagens/Black Bull Whey Supreme 908g.webp",
+    benefits: ["Ganho de massa magra", "Recuperação muscular", "44g Proteína / Low Fat"]
   },
 
   {
     id: 9,
-    name: "BCAA 5000 Powder",
-    category: "massa-muscular",
-    price: 19500,
-    image: "imagens/bcaa.jpg",
-    benefits: ["Recuperação muscular", "Anticatabólico", "Reduz a fadiga"]
+    name: "Vitatech Multi Vitamin Women 30 Tabs",
+    category: "emagrecimento",
+    price: 16000,
+    image: "imagens/Vitatech Multi Vitamin Women 30 Tabs.webp",
+    benefits: ["Com extrato de Cranberry", "Energia e imunidade", "Saúde da pele, cabelo e unhas"]
   },
 
   {
     id: 10,
-    name: "Omega 3 Ultra Pure",
-    category: "emagrecimento",
-    price: 12500,
-    image: "imagens/omega3.jpg",
-    benefits: ["Saúde cardiovascular", "Ação anti-inflamatória", "Apoio articular"]
+    name: "Titan Core Whey Protein 2kg",
+    category: "proteinas",
+    price: 56000,
+    image: "imagens/Titan Core Whey Protein 2kg.webp",
+    benefits: ["100% Whey Protein Powder", "Sem glúten (Gluten Free)", "Origem França / Europa"]
   },
 
   {
     id: 11,
-    name: "Pre-Workout Nitro V8",
-    category: "forca-creatina",
-    price: 24000,
-    image: "imagens/pre-workout.jpg",
-    benefits: ["Foco mental de elite", "Vascularização extrema", "Energia explosiva"]
+    name: "Titan Core BCAA Strawberry Mango 180g",
+    category: "massa-muscular",
+    price: 15000,
+    image: "imagens/Titan Core BCAA Strawberry Mango 180g.webp",
+    benefits: ["Reduz dores musculares", "Recuperador muscular", "Auxilia na concentração"]
   },
 
   {
     id: 12,
-    name: "Casein Night Protein 1kg",
+    name: "Nutritech NT Isolate Whey 1kg",
     category: "proteinas",
-    price: 32000,
-    image: "imagens/casein.jpg",
-    benefits: ["Absorção lenta (8h)", "Nutrição noturna", "Manutenção da massa"]
-  }
+    price: 60000,
+    image: "imagens/Nutritech NT Isolate Whey 1kg.webp",
+    benefits: ["25g Proteína / 5.2g BCAAs", "Ganho de massa e definição", "Fórmula de rápida absorção"]
+   }
 ];
 
 function renderProducts(productsList) {
