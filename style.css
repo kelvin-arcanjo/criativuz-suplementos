@@ -54,7 +54,32 @@ header {
 }
 
 header h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: -20px;
+}
+
+header h2 {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-top: -12px;
     margin-bottom: var(--spacing-lg);
+}
+
+header h2 span.italic-letter {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    margin-top: -12px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.slogan {
+    font-family: "Ruwudu", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .category-pills {
