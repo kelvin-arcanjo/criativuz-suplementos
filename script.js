@@ -4,6 +4,13 @@ let cart = [];
 
 const searchInput = document.getElementById('search-input');
 
+//Seleção dos elementos do DOM pra lógica do cart-modal;
+
+const cartModal = document.getElementById('cart-modal');
+const cartToggleBtn = document.getElementById('cart-toggle-btn');
+const closeCartBtn = document.getElementById('close-cart-btn');
+const cartOverlay = document.getElementById('cart-overlay');
+
 const products = [
   {
     id: 1,
@@ -379,3 +386,45 @@ function checkoutWhatsApp() {
 // Evento no botão de checkout;
 
 document.getElementById('checkout-whatsapp-btn').addEventListener('click', checkoutWhatsApp);
+
+
+// Função para alternar (abrir/fechar) ao clicar no botão flutuante;
+
+function toggleCart() {
+  cartModal.classList.toggle('open');
+  if (cartOverlay) cartOverlay.classList.toggle('open');
+}
+
+// Função para fechar diretamente;
+
+function closeCart() {
+  cartModal.classList.remove('open');
+  if (cartOverlay) cartOverlay.classList.remove('open');
+}
+
+// Clicar no botão flutuante: abre se estiver fechado, fecha se estiver aberto;
+
+cartToggleBtn.addEventListener('click', toggleCart);
+
+// Clicar no botão "X" dentro do modal;
+
+if (closeCartBtn) {
+  closeCartBtn.addEventListener('click', closeCart);
+}
+
+// Clicar fora (no overlay escurecido);
+
+if (cartOverlay) {
+  cartOverlay.addEventListener('click', closeCart);
+}
+
+// Pressionar a tecla ESC;
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && cartModal.classList.contains('open')) {
+    closeCart();
+  }
+});
+
+
+
