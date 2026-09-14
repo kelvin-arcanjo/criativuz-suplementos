@@ -41,8 +41,14 @@
 
    <button id="cart-toggle-btn" class="cart-floating-btn">🛒 <span id="cart-count">0</span></button>
 
+   <div id="cart-overlay" class="cart-overlay"></div>
+
     <aside id="cart-modal" class="cart-modal">
-        <h2>Seu Carrinho</h2>
+        <div class="cart-header">
+            <h2>Seu Carrinho</h2>
+            <button id="close-cart-btn" class="close-btn" aria-label="Fechar carrinho">&times;</button>
+        </div>
+
         <div id="cart-items"></div>
         <p>Total: <span id="cart-total">0 KZ</span></p>
 

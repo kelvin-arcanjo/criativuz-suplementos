@@ -230,7 +230,7 @@ header h2 span.italic-letter {
     width: 100%;
     height: 100vh;
     max-width: 400px;
-    background-color: #eaeee1;
+    background-color: rgb(185, 182, 182);
     padding: 1.5rem;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
     transform: translateX(100%);
@@ -241,4 +241,154 @@ header h2 span.italic-letter {
 /* Classe ativada via JavaScript para abrir o carrinho */
 .cart-modal.open {
   transform: translateX(0);
+}
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.cart-overlay.open {
+   opacity: 1;
+   visibility: visible;
+}
+
+.cart-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-bottom: 0.75rem;
+   border-bottom: 1px solid #333;
+}
+
+.cart-header h2 {
+   font-size: 1.25rem;
+   margin: 0;
+}
+
+.close-btn {
+   background:  none;
+   border: none;
+   color: #ffffff;
+   font-size: 1.8rem;
+   cursor: pointer;
+   line-height: 1;
+   transition: color 0.2s;
+}
+
+.close-btn:hover {
+   color: var(--primary-red);
+}
+
+.cart-items {
+   display: flex;
+   flex-direction: column;
+   gap: 0.75rem;
+   flex-grow: 1;
+   overflow-y: auto;
+}
+
+.cart-modal p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #333;
+  padding-top: 0.75rem;
+  margin: 0;
+}
+
+#cart-total {
+  color: var(--primary-red);
+}
+
+/* --- Inputs do Cliente --- */
+
+.cart-modal input {
+  width: 100%;
+  background-color: #262626;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  outline: none;
+}
+
+.cart-modal input:focus {
+  border-color: var(--primary-red);
+}
+
+/* --- Botão do WhatsApp --- */
+
+.whatsapp-btn {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: #25d366; /* Verde oficial WhatsApp */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebc57;
+}
+
+.whatsapp-btn:active {
+  transform: scale(0.98);
+}
+
+/* --- Botão Flutuante do Carrinho --- */
+.cart-floating-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary-red);
+  color: #ffffff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 998;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cart-floating-btn:hover {
+  transform: scale(1.08);
+}
+
+/* --- Badge de Contagem (Número sobre o botão) --- */
+#cart-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #ffffff;
+  color: #121212;
+  font-size: 0.75rem;
+  font-weight: 800;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-red);
 }
