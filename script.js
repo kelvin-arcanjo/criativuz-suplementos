@@ -121,26 +121,27 @@ const products = [
    }
 ];
 
+// --- RENDERIZAÇÃO DE PRODUTOS ---
+
 function renderProducts(productsList) {
-    const gridContainer = document.getElementById('products-grid')
+  const gridContainer = document.getElementById('products-grid');
+  if (!gridContainer) return;
 
-    const cardsHTML = productsList.map(product => {
-        const benefitsList = product.benefits
-            .map(b => `<li>${b}</li>`)
-            .join('')
+  const cardsHTML = productsList.map(product => {
+    const benefitsList = product.benefits.map(b => `<li>${b}</li>`).join('');
 
-        return `
-            <div class="product-card">
-                <img src="${product.image}" alt="${product.name}">
-                <h3>${product.name}</h3>
-                <ul>${benefitsList}</ul>
-                <p class="price">${product.price} KZ</p>
-                <button onclick="addToCart(${product.id})">Adicionar ao Carrinho</button>
-            </div>
-            `;
-    }).join('')
+    return `
+      <div class="product-card">
+        <img src="${product.image}" alt="${product.name}">
+        <h3>${product.name}</h3>
+        <ul>${benefitsList}</ul>
+        <p class="price">${product.price.toLocaleString('pt-PT')} KZ</p>
+        <button onclick="addToCart(${product.id})">Adicionar ao Carrinho</button>
+      </div>
+    `;
+  }).join('');
 
-    gridContainer.innerHTML = cardsHTML
+  gridContainer.innerHTML = cardsHTML;
 }
 
 renderProducts(products);
@@ -228,34 +229,32 @@ function updateCartCount() {
 //Função renderCartItems();
 
 function renderCartItems() {
-    const cartItemsContainer = document.getElementById('cart-items')
+  const cartItemsContainer = document.getElementById('cart-items');
+  if (!cartItemsContainer) return;
 
-    if (cart.length === 0) {
-        cartItemsContainer
-            .innerHTML = '<p class="empty-cart">Seu carrinho está vazio </p>'
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML = '<p class="empty-cart">Seu carrinho está vazio</p>';
+    return;
+  }
 
-        return
-    }
+  const itemsHTML = cart.map(item => `
+    <div class="cart-item">
+      <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+      <div class="cart-item-info">
+        <h4>${item.name}</h4>
+        <p>${item.price.toLocaleString('pt-PT')} KZ</p>
+      </div>
+      <div class="cart-item-controls">
+        <button class="btn-qty" data-id="${item.id}" data-action="decrease">-</button>
+        <span>${item.quantity}</span>
+        <button class="btn-qty" data-id="${item.id}" data-action="increase">+</button>
+      </div>
+      <p class="cart-item-subtotal">${(item.price * item.quantity).toLocaleString('pt-PT')} KZ</p>
+      <button class="btn-remove" data-id="${item.id}" data-action="remove">&times;</button> 
+    </div>
+  `).join('');
 
-    const itemsHTML = cart
-        .map(item => `
-            <div class="cart-item">
-                <img src="${item.image}" alt="${item.name}" class="cart-item-img">
-                <div class="cart-item-info">
-                    <h4>${item.name}</h4>
-                    <p>${item.price} KZ</p>
-                </div>
-                <div class="cart-item-controls">
-                    <button class="btn-qty" data-id="${item.id}" data-action="decrease">-</button>
-                    <span>${item.quantity}</span>
-                    <button class="btn-qty" data-id="${item.id}" data-action="increase">+</button>
-                </div>
-                <p class="cart-item-subtotal">${item.price * item.quantity} KZ</p>
-                <button class="btn-remove" data-id="${item.id}" data-action="remove">&times;</button> 
-            </div>
-          `).join('')
-
-        cartItemsContainer.innerHTML = itemsHTML;                  
+  cartItemsContainer.innerHTML = itemsHTML;                  
 }
 
 

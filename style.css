@@ -392,3 +392,76 @@ header h2 span.italic-letter {
   justify-content: center;
   border: 2px solid var(--primary-red);
 }
+
+/* --- Item do Carrinho --- */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: #575555;
+  border-radius: 8px;
+  border: 1px solid #333;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+#cart-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+#cart-items::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+#cart-items::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-red);
+}
+
+/* --- Miniatura da Imagem (Ajuste Principal) --- */
+.cart-item-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain; /* Evita distorcer a imagem */
+  background-color: #1a1a1a;
+  border-radius: 6px;
+  padding: 0.25rem;
+  flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+/* --- Informações do Produto --- */
+.cart-item-info {
+  flex-grow: 1;
+}
+
+.cart-item-info h4 {
+  font-size: 0.9rem;
+  margin: 0 0 0.25rem 0;
+  color: #ffffff;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cart-item-price {
+  font-size: 0.80rem;
+  font-weight: bold;
+  color: var(--primary-red);
+  margin: 0;
+}
+
+/* --- Botão Remover do Item --- */
+.remove-item-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+
+.remove-item-btn:hover {
+  color: #ff4d4d;
+}
