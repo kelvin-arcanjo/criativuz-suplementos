@@ -136,7 +136,7 @@ function renderProducts(productsList) {
         <h3>${product.name}</h3>
         <ul>${benefitsList}</ul>
         <p class="price">${product.price.toLocaleString('pt-PT')} KZ</p>
-        <button onclick="addToCart(${product.id})">Adicionar ao Carrinho</button>
+        <button onclick="addToCart(${product.id}, this)">Adicionar ao Carrinho</button>
       </div>
     `;
   }).join('');
@@ -190,7 +190,7 @@ function applyFilters() {
 
 //Lógica Cart;
 
-function addToCart(productId) {
+function addToCart(productId , buttonElement) {
     const product = products.find(p => p.id === productId)
     if (!product) return
 
@@ -214,6 +214,21 @@ function addToCart(productId) {
     // Atualiza os elementos da tela;
 
     updateCartUI()
+
+    //Feedback visual temporário no botão;
+
+    if (buttonElement) {
+      buttonElement.classList.add('btn-added')
+      const originalText = buttonElement.textContent
+      buttonElement.textContent = "✓ Adicionado!"
+      buttonElement.disabled = true
+
+      setTimeout(() => {
+        buttonElement.classList.remove('btn-added')
+        buttonElement.textContent = originalText
+        buttonElement.disabled = false
+      }, 1500)
+    }
 }
 
 //Função updateCartCount();

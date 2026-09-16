@@ -238,6 +238,12 @@ header h2 span.italic-letter {
     z-index: 1000;
 }
 
+.product-card button.btn-added {
+  background-color: #1ebc57;
+  color: white;
+  font-weight: bold;
+}
+
 /* Classe ativada via JavaScript para abrir o carrinho */
 .cart-modal.open {
   transform: translateX(0);
