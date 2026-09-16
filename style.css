@@ -515,3 +515,93 @@ header h2 span.italic-letter {
   color: #fff;
   user-select: none;
 }
+
+footer {
+  width: 100%;
+  background-color: #121212;
+  color: #ccc;
+  padding: 2rem;
+  border-top: 2px solid var(--primary-red-dark);
+  margin-top: 3rem;
+}
+
+footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(220px,1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+.footer-block h4 {
+  position: relative;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+
+.footer-block p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-block i {
+  color: var(--primary-red);
+}
+
+.brand-footer {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 0.75rem;
+  object-fit: cover;
+}
+
+.footer-slogan {
+  color: #aa1010;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.social-links a:hover {
+  background-color: var(--primary-red);
+  transform: translateY(-3px);
+}
+
+.social-links a i {
+  color: #fff;
+}
+
+/* Linha de Copyright */
+.footer-bottom {
+  border-top: 1px solid #222;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+}
