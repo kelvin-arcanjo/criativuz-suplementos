@@ -299,7 +299,7 @@ header h2 span.italic-letter {
    overflow-y: auto;
 }
 
-.cart-modal p.cart-item-subtotal {
+.cart-modal p#total {
   font-size: 1.1rem;
   font-weight: bold;
   display: flex;
@@ -450,27 +450,68 @@ header h2 span.italic-letter {
 }
 
 .cart-item-price {
+  color: #a3a3a3;
   font-size: 0.80rem;
-  font-weight: bold;
-  color: var(--primary-red);
+  font-weight: normal;
   margin: 0;
 }
 
+.cart-item-subtotal {
+  color: var(--primary-red);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 /* --- Botão Remover do Item --- */
-.remove-item-btn {
+.btn-remove {
   background: none;
-  border: none;
-  color: #888;
+  border: 1px solid;
+  border-radius: 50%;
+  color: #ff4d4d;
   font-size: 1.2rem;
   cursor: pointer;
   padding: 0.2rem;
 }
 
-.remove-item-btn:hover {
-  color: #ff4d4d;
+.btn-remove:hover {
+  background-color: white;
+  color: red;
 }
 
-#total {
+.cart-item-controls {
+  display: inline-flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.btn-qty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  color: #fff;
+  font-size: 0.9rem;
   font-weight: bold;
-  margin-top: 15px;
+  border: none;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.btn-qty:hover {
+  background-color: var(--primary-red);
+  color: #fff;
+}
+
+.cart-item-controls span {
+  min-width: 24px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #fff;
+  user-select: none;
 }

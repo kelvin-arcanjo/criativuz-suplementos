@@ -330,7 +330,7 @@ function updateCartTotal() {
         return acc + (item.price * item.quantity)
     }, 0)
 
-    cartTotalElement.textContent = `${totalInKZ} KZ`;
+    cartTotalElement.textContent = `${totalInKZ.toLocaleString('pt-PT')} KZ`;
 }
 
 //Função updateCartUI;
