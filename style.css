@@ -291,7 +291,7 @@ header h2 span.italic-letter {
    color: var(--primary-red);
 }
 
-.cart-items {
+#cart-items {
    display: flex;
    flex-direction: column;
    gap: 0.75rem;
@@ -408,8 +408,6 @@ header h2 span.italic-letter {
   background-color: #575555;
   border-radius: 8px;
   border: 1px solid #333;
-  max-height: 400px;
-  overflow-y: auto;
 }
 
 #cart-items::-webkit-scrollbar {
