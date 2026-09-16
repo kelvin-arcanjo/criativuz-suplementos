@@ -299,7 +299,7 @@ header h2 span.italic-letter {
    overflow-y: auto;
 }
 
-.cart-modal p {
+.cart-modal p.cart-item-subtotal {
   font-size: 1.1rem;
   font-weight: bold;
   display: flex;
