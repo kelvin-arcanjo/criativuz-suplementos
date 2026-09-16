@@ -469,3 +469,8 @@ header h2 span.italic-letter {
 .remove-item-btn:hover {
   color: #ff4d4d;
 }
+
+#total {
+  font-weight: bold;
+  margin-top: 15px;
+}
