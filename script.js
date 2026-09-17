@@ -256,8 +256,8 @@ function renderCartItems() {
     <div class="cart-item">
       <img src="${item.image}" alt="${item.name}" class="cart-item-img">
       <div class="cart-item-info">
-        <h4>${item.name}</h4>
-        <p class="cart-item-price">${item.price.toLocaleString('pt-PT')} KZ</p>
+        <h4 class="cart-item-title">${item.name}</h4>
+        <p class="cart-item-price">${(item.price).toLocaleString('pt-PT')} KZ</p>
       </div>
       <div class="cart-item-controls">
         <button class="btn-qty" data-id="${item.id}" data-action="decrease">-</button>
