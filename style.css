@@ -662,4 +662,8 @@ footer .footer-container {
     justify-content: center;
     align-items: center;
   }
+
+  .footer-block {
+    min-width: 0;
+  }
 }
