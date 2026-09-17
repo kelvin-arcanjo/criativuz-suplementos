@@ -172,7 +172,7 @@ header h2 span.italic-letter {
     margin-top: 0.75rem;
     margin-bottom: 0.5rem;
     line-height: 1.3;
-    min-height: 2.6rem; 
+    min-height: 4.5rem; 
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -550,6 +550,16 @@ footer .footer-container {
   margin-bottom: 0.5rem;
 }
 
+.footer-block a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-block a:hover {
+  color: var(--primary-red);
+}
+
 .footer-block i {
   color: var(--primary-red);
 }
@@ -604,4 +614,38 @@ footer .footer-container {
   text-align: center;
   font-size: 0.8rem;
   color: #777;
+}
+
+/* --- Media Queries --- */
+
+@media (max-width: 768px) {
+  .category-pills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  .pill-btn:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cart-modal {
+    width: 100%;
+    max-width: 75%;
+  }
+
+  .cart-modal input { width: 70%};
+
+  .footer-container {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .footer-brand { grid-column: span 2; }
+
+  .footer-block:nth-child(4) {
+    grid-column: span 2
+  }
 }
