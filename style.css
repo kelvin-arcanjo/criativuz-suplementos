@@ -660,5 +660,6 @@ footer .footer-container {
   .social-links {
     display: grid;
     justify-content: center;
+    align-items: center;
   }
 }
