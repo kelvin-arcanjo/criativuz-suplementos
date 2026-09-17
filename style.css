@@ -702,8 +702,8 @@ footer .footer-container {
     height: 40px;
   }
 
-  .cart-item-title {
-    font-size: 0.8rem;
+  .cart-item-price {
+    display: none;
   }
 
   .cart-item-subtotal {
