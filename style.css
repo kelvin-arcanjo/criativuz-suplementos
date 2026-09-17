@@ -670,4 +670,14 @@ footer .footer-container {
   #title-social-media {
     display: none;
   }
+
+  .cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
 }
