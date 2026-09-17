@@ -656,4 +656,9 @@ footer .footer-container {
   #endereco {
     max-width: 50%;
   }
+
+  .social-links {
+    display: grid;
+    justify-content: center;
+  }
 }
