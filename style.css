@@ -666,4 +666,8 @@ footer .footer-container {
   .footer-block {
     min-width: 0;
   }
+
+  #title-social-media {
+    display: none;
+  }
 }
