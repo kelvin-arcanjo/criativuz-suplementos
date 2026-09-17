@@ -648,4 +648,12 @@ footer .footer-container {
   .footer-block:nth-child(4) {
     grid-column: span 2
   }
+
+  .footer-slogan {
+    max-width: 50%;
+  }
+
+  #endereco {
+    max-width: 50%;
+  }
 }
