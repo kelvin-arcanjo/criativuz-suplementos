@@ -17,7 +17,7 @@ const products = [
     name: "Hyperbolic Mass 4kg",
     category: "massa-muscular",
     price: 46500,
-    image: "imagens/hyperbolic 4kg.webp",
+    image: "imagens/hyperbolic4kg.webp",
     benefits: ["Ganho de tamanho", "Ganho de peso", "Ganho de massa muscular"]
   },
 
@@ -26,7 +26,7 @@ const products = [
     name: "Cuts Burner 90 comp",
     category: "emagrecimento",
     price: 20000,
-    image: "imagens/Cuts Burner 90 comp.webp",
+    image: "imagens/cutsburner90comp.webp",
     benefits: ["Queimador de gordura", "Aumenta a força", "Corta o apetite"]
   },
 
@@ -35,7 +35,7 @@ const products = [
     name: "Super Pump Beast 40 colheres",
     category: "forca-creatina",
     price: 22000,
-    image: "imagens/Super Pump Beast.webp",
+    image: "imagens/superpumpbeast.webp",
     benefits: ["Energia", "Resistência", "Garante treino intenso"]
   },
 
@@ -44,7 +44,7 @@ const products = [
     name: "100% Creatine Monohydrate",
     category: "forca-creatina",
     price: 16500,
-    image: "imagens/100  Creatine Monohydrate.webp",
+    image: "imagens/100creatinemonohydrate.webp",
     benefits: ["Força", "Resistência", "Recuperação muscular"]
   },
 
@@ -53,7 +53,7 @@ const products = [
     name: "L-Carnitine Liquid 2500",
     category: "emagrecimento",
     price: 25500,
-    image: "imagens/LCarnitine Liquid 2500.webp",
+    image: "imagens/lcarnitineliquid2500.webp",
     benefits: ["Emagrecimento", "Perda de peso", "Controle de peso"]
   },
 
@@ -62,7 +62,7 @@ const products = [
     name: "Pure Glutamine 9000",
     category: "proteinas",
     price: 18000,
-    image: "imagens/Pure glutamine 9000.webp",
+    image: "imagens/pureglutamine9000.webp",
     benefits: ["Recuperação", "Fortalece imunidade", "Melhora saúde intestinal"]
   },
 
@@ -71,7 +71,7 @@ const products = [
     name: "Pré Treino Qhush Super Heat 105g",
     category: "forca-creatina",
     price: 15500,
-    image: "imagens/Pré Treino Qhush Super Heat 105g.webp",
+    image: "imagens/pretreinoqhushsuperheat105g.webp",
     benefits: ["Aumenta a força e resistência", "Reduz o cansaço", "Mais tempo de treino"]
   },
 
@@ -80,7 +80,7 @@ const products = [
     name: "Black Bull Whey Supreme 908g",
     category: "proteinas",
     price: 29500,
-    image: "imagens/Black Bull Whey Supreme 908g.webp",
+    image: "imagens/blackbullwheysupreme908g.webp",
     benefits: ["Ganho de massa magra", "Recuperação muscular", "44g Proteína / Low Fat"]
   },
 
@@ -89,7 +89,7 @@ const products = [
     name: "Vitatech Multi Vitamin Women 30 Tabs",
     category: "emagrecimento",
     price: 16000,
-    image: "imagens/Vitatech Multi Vitamin Women 30 Tabs.webp",
+    image: "imagens/vitatechmultivitaminwomen30tabs.webp",
     benefits: ["Com extrato de Cranberry", "Energia e imunidade", "Saúde da pele, cabelo e unhas"]
   },
 
@@ -98,7 +98,7 @@ const products = [
     name: "Titan Core Whey Protein 2kg",
     category: "proteinas",
     price: 56000,
-    image: "imagens/Titan Core Whey Protein 2kg.webp",
+    image: "imagens/titancorewheyprotein2kg.webp",
     benefits: ["100% Whey Protein Powder", "Sem glúten (Gluten Free)", "Origem França / Europa"]
   },
 
@@ -107,7 +107,7 @@ const products = [
     name: "Titan Core BCAA Strawberry Mango 180g",
     category: "massa-muscular",
     price: 15000,
-    image: "imagens/Titan Core BCAA Strawberry Mango 180g.webp",
+    image: "imagens/titancorebcaastrawberrymango180g.webp",
     benefits: ["Reduz dores musculares", "Recuperador muscular", "Auxilia na concentração"]
   },
 
@@ -116,7 +116,7 @@ const products = [
     name: "Nutritech NT Isolate Whey 1kg",
     category: "proteinas",
     price: 60000,
-    image: "imagens/Nutritech NT Isolate Whey 1kg.webp",
+    image: "imagens/nutritechntisolatewhey1kg.webp",
     benefits: ["25g Proteína / 5.2g BCAAs", "Ganho de massa e definição", "Fórmula de rápida absorção"]
    }
 ];
